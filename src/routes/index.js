@@ -9,7 +9,7 @@ import { getSessionToken} from "../utils/session";
 
 const Routes = () => {
     if(window.location.pathname === "/") {
-        if(!_.isEmpty(getSessionToken("session-id"))) {
+        if(!_.isEmpty(getSessionToken("session_id"))) {
             browserHistory.push("/home");
         }
     }

@@ -3,8 +3,12 @@ import { Box, Button } from "@material-ui/core";
 import FormikControl from "../../Formik/formikcontrol";
 import {useStyles} from "./styles";
 import history from "../../routes/history";
+import axios from "axios";
+import { setSessionToken } from "../../utils/session";
 
 const EmailIdPassword = (props) => {
+    const {setLoading} = props;
+
     const classes = useStyles();
 
     const initialValues = {
@@ -12,8 +16,31 @@ const EmailIdPassword = (props) => {
         password: "",
     }
 
-    const reactOnSubmit = () => {
-        history.push("/home");
+    const reactOnSubmit = (values, formik) => {
+        setLoading(true);
+
+        const url = `http://localhost:8080/user/login`;
+        
+        const data = {
+            userMailId: values.emailId,
+            password: values.password,
+        }
+        
+        const config = {
+            headers: {"Content-Type" : "application/json"},
+        }
+
+        axios
+            .post(url, data, config)
+            .then((data) => {
+                formik.resetForm();
+                setLoading(false);
+                setSessionToken("session_id", data?.data?.session_id);
+                history.push("/home");
+            })
+            .catch((error) => {
+                setLoading(false);
+            })
     }
 
     return (

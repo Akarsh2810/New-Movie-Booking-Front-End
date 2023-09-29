@@ -12,7 +12,7 @@ const Header = () => {
             <Box className={classes.movieName}>
                 <Typography className={classes.movieStyle}>MOVIE BOOKING APP</Typography>
             </Box>
-            {(!_.isEmpty(getSessionToken("session-id"))) && <Logout />}
+            {(!_.isEmpty(getSessionToken("session_id"))) && <Logout />}
         </div>
     )
 }
