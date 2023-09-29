@@ -5,8 +5,8 @@ const useStyles = makeStyles(() => ({
         display: "flex",
         flexDirection: "row",
         justifyContent: "left-align",
-        margin: "5px",
-        border: "2px solid red"
+        // margin: "5px",
+        // border: "2px solid red"
     }
 }), {index: 1})
 

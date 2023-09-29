@@ -8,8 +8,8 @@ const useStyles = makeStyles(() => ({
         height: "95vh",
         width: "70%",
         backgroundRepeat: "no-repeat",
-        margin: "5px",
-        border: "2px solid red"
+        // margin: "5px",
+        // border: "2px solid red"
     }
 }), {index: 1})
 

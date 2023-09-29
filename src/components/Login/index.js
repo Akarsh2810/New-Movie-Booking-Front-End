@@ -9,7 +9,7 @@ const Login = (props) => {
     return (
         <div className={classes.layout}>
             <Paper className={classes.paper}>
-                <Typography className={classes.typo}>LOGIN</Typography>
+                <Typography className={classes.typo}>LOGIN FORM</Typography>
                 <EmailIdPassword setLoading={setLoading} />
             </Paper>
         </div>
