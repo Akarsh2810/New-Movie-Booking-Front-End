@@ -2,18 +2,25 @@ import { Formik, Form } from "formik";
 import { Box, Button } from "@material-ui/core";
 import FormikControl from "../../Formik/formikcontrol";
 import {useStyles} from "./styles";
+import history from "../../routes/history";
 
 const EmailIdPassword = (props) => {
     const classes = useStyles();
+
     const initialValues = {
         emailId: "",
         password: "",
+    }
+
+    const reactOnSubmit = () => {
+        history.push("/home");
     }
 
     return (
         <>
             <Formik
                 initialValues={initialValues}
+                onSubmit = {reactOnSubmit}
             >
                 {(formik) => (
                     <Form className={classes.layout}>
