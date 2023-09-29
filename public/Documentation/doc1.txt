@@ -1,6 +1,9 @@
 App component:
-- to redirect user to the landing page if sessiontoken is empty
-- to return and sync the layout with their path
+- calls routes component when the path matches with "/"
+
+Routes component:
+- check the sessiontoken and redirect user to the home page is session token is present
+- use route and switch to call the layout component type and match path value
 
 3 Layouts:
 

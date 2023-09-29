@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import LandingPage from "./layouts/LandingPage";
+import Routes from "./routes";
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path = "/" component = {LandingPage}/>
+      <Route path = "/" component = {Routes}/>
     </BrowserRouter>
   );
 }
