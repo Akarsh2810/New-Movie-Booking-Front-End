@@ -1,6 +1,10 @@
+import { useState } from "react";
+import Loader from "../../utils/Loader";
+
 const LandingPage = () => {
+    const [loading, setLoading] = useState(true);
     return (
-        <div>hii</div>
+        <Loader loading={loading}></Loader>
     )
 }
 
