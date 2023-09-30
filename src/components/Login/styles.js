@@ -7,6 +7,7 @@ const useStyles = makeStyles(() => ({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "grey"
 
         // justifycontent and alignitems are orthogonal to each other
         // flex box depends completely on justify content and alignitems
