@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
         // alignitems: "center",
         
         // margin: "5px",
-        border: "0.5em solid grey"
+        // border: "0.5em solid grey"
     },
     typo: {
         display: "flex",

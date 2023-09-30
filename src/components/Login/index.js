@@ -8,7 +8,7 @@ const Login = (props) => {
 
     return (
         <div className={classes.layout}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper} elevation={24}>
                 <Typography className={classes.typo}>LOGIN FORM</Typography>
                 <EmailIdPassword setLoading={setLoading} />
             </Paper>

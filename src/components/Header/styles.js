@@ -6,9 +6,9 @@ const useStyles = makeStyles(() => ({
         // padding: "2em",
         backgroundColor: "purple",
         display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
+        // flexDirection: "row",
+        // alignItems: "center",
+        // justifyContent: "center",
         height: "3em",
         width: "100%",
         // border: "2px solid red"
@@ -17,14 +17,15 @@ const useStyles = makeStyles(() => ({
         // border: "2px solid red",
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
-        width: "90%",
+        width: "100%",
     },
     movieStyle: {
         fontSize: "2em",
         fontWeight: "bold",
-        color: "white"
+        color: "white",
+        paddingLeft: "19em"
     }
 }))
 

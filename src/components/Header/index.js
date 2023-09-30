@@ -11,8 +11,8 @@ const Header = () => {
         <div className={classes.layout}>
             <Box className={classes.movieName}>
                 <Typography className={classes.movieStyle}>MOVIE BOOKING APP</Typography>
+                {(!_.isEmpty(getSessionToken("session_id"))) && <Logout />}
             </Box>
-            {(!_.isEmpty(getSessionToken("session_id"))) && <Logout />}
         </div>
     )
 }

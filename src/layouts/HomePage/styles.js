@@ -5,8 +5,14 @@ const useStyles = makeStyles(() => ({
         height: "99vh",
         border: "2px solid red"
     },
-    pos: {
+    submit: {
+        marginTop: "1em",
+        border: "2px solid black",
+        width: "20em",
+    },
+    submitWrapper: {
         display: "flex",
+        flexDirection: "row",
         justifyContent: "center",
     },
     booking: {

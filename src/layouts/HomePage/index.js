@@ -1,4 +1,4 @@
-import { Button, Typography } from "@material-ui/core";
+import { Button, Box } from "@material-ui/core";
 import BookingsTable from "../../components/BookingsTable";
 import Header from "../../components/Header";
 import browserHistory from "../../routes/history";
@@ -21,11 +21,14 @@ const HomePage = () => {
         <div className={classes.layout}>
             <Header />
             <BookingsTable />
-            <div className={classes.pos}>
-                <Button onClick={handleClick}>
-                    <Typography className={classes.booking}>BOOK YOUR MOVIE</Typography>
+            <Box className={classes.submitWrapper}>
+                <Button className={classes.submit}
+                    type = "submit"
+                    onClick={handleClick}
+                >
+                    BOOK YOUR MOVIE
                 </Button>
-            </div>
+            </Box>
         </div>
     )
 }

@@ -47,6 +47,7 @@ const BookingsTable = () => {
             .then((data) => {
                 console.log(data);
                 const dataTable = [];
+                // eslint-disable-next-line array-callback-return
                 data?.data.map((obj) => {
                     let dataRow = [
                         {
