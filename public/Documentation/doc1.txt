@@ -1,0 +1,29 @@
+App component:
+- calls routes component when the path matches with "/"
+
+Routes component:
+- check the sessiontoken and redirect user to the home page is session token is present
+- use route and switch to call the layout component type and match path value
+
+3 Layouts:
+
+1. Landing Page
+2. Home Page
+3. Booking Page
+
+1. Landing Page contains 3 components:
+- Loader : responsible to display loading before loading other Page
+- Image : to display background image to the website
+- Login : to display a login form
+
+1. Login component contains 3 components;
+- Paper : to display a paper form
+- Typography : to set paper form header
+- EmailIdPassword : to input emailId and password from the user
+
+2. Home Page contais 3 components:
+- Header : to display a header with logout option
+- bookingstable : to display list of bookings done by the user in the form of a table
+- createbooking : to navigate the user to the booking page
+
+3. Booking Page contains a form and a button.
