@@ -4,8 +4,9 @@ const useStyles = makeStyles(() => ({
     layout: {
         display: "flex",
         justifyContent: "center",
-        margin: "2em",
-        border: "2px solid purple",
+        marginTop: "2em",
+        marginBottom: "2em",
+        // border: "2px solid purple",
     }
 }))
 
