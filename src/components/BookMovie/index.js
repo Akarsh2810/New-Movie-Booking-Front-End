@@ -4,6 +4,8 @@ import { Form, Formik } from "formik";
 import {Box, Button} from "@material-ui/core";
 import FormikControl from "../../Formik/formikcontrol";
 import browserHistory from "../../routes/history";
+import axios from "axios";
+import {getSessionToken} from "../../utils/session";
 
 const BookMovie = () => {
     const classes = useStyles();
@@ -16,8 +18,32 @@ const BookMovie = () => {
         userMailId: ""
     }
 
-    const reactOnSubmit = () => {
-        browserHistory.push("/home")
+    const reactOnSubmit = (values, formik) => {
+        const url = `http://localhost:8080/booking`;
+
+        const config = {
+            headers: {
+                session_id : getSessionToken("session_id")
+            }
+        }
+
+        const data = {
+            movieName : values.movieName,
+            date : values.date,
+            timeSlot : values.timeSlot,
+            venue : values.venue,
+            userMailId : values.userMailId
+        }
+
+        axios
+            .post(url, data, config)
+            .then(() => {
+                formik.resetForm();
+                browserHistory.push("/home")
+            })
+            .catch(() => {
+
+            })
     }
 
     return (
@@ -61,10 +87,10 @@ const BookMovie = () => {
                             <Box>
                                 <FormikControl 
                                     control = "input"
-                                    type = "text"
+                                    type = "time"
                                     label = "Time Slot"
                                     name = "timeSlot"
-                                    inputlabel = "Time Slot"
+                                    // inputlabel = "Time Slot"
                                     onValueChange = {(event) => {
                                         formik.setFieldValue("timeSlot", event.target.value);
                                     }}
